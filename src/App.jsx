@@ -1,10 +1,12 @@
-function App() {
+import "./App.css";
+// import { Home } from "./pages/vaga/Home";
+import { Header } from "./shared/components/header/Header";
 
-  return (
-    <div>
-
-    </div>
-  )
-}
-
-export default App
+export const App = () => {
+    return (
+        <div>
+            <Header />
+            {/* <Home /> */}
+        </div>
+    );
+};
