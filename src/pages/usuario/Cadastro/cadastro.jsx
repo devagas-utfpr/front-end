@@ -68,6 +68,9 @@ export const Cadastro = () => {
         </div>
         <button type="submit">Cadastrar</button>
       </form>
+      <p className="login-text">
+        Já possui uma conta? <a href="/login">Clique aqui!</a>
+      </p>
     </div>
   );
 };
