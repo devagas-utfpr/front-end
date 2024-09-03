@@ -1,12 +1,17 @@
 import "./App.css";
-// import { Home } from "./pages/vaga/Home";
+import { Cadastro, Login } from "./pages";
 
-import { Login } from "./pages/usuario/Login/login";
+import { LOGIN, CADASTRO } from "./routes/routes";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 export const App = () => {
-    return (
-        <>
-            <Login />
-        </>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path={LOGIN} element={<Login />} />
+        <Route path={CADASTRO} element={<Cadastro />} />
+        <Route path="*" element={<Navigate to={LOGIN} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
