@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../../assets/logoHorizontal.png"
 import "./login.css";
 
-export const Login = () => {  
+export const Login = () => {
   return (
     <div className="login-container">
       <img src={logo} alt="Logo" className="logo" />

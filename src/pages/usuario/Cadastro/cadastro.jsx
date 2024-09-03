@@ -4,7 +4,9 @@ import "./cadastro.css";
 
 export const Cadastro = () => { 
 return (
-    <div></div>
-
-    )
+    <div className="cadastro-container">
+      <img src={logo} alt="Logo" className="logo" />
+      <h2>Cadastre-se</h2>
+    </div>
+    );
 }
