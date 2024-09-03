@@ -14,7 +14,7 @@
   }
   
   .cadastro-container {
-    max-width: 400px;
+    max-width: 40%;
     margin: 100px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -39,7 +39,7 @@
   }
   
   .form-group {
-    margin-bottom: 15px;
+    flex: 1;
   }
   
   .form-group input {
@@ -53,6 +53,43 @@
   }
   
   .form-group input::placeholder {
+    color: #6c757d;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  
+  button {
+    width: 150px;
+    padding: 10px;
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #3aafa9;
+  }
+
+  #date-of-birth {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+  }
+  
+  #date-of-birth::placeholder {
     color: #6c757d;
   }
   
