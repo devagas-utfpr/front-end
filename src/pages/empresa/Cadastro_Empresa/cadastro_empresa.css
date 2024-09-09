@@ -38,11 +38,12 @@
     font-weight: bold;
   }
   
-  .form-group {
+  .form-empresa-group {
     flex: 1;
+    margin-bottom: 20px;
   }
   
-  .form-group input {
+  .form-empresa-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ced4da;
@@ -52,14 +53,12 @@
     color: #0d1b2a;
   }
   
-  .form-group input::placeholder {
+  .form-empresa-group input::placeholder {
     color: #6c757d;
   }
 
   .form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex: 1;
   }
   
   
