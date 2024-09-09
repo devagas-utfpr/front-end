@@ -62,3 +62,33 @@
     gap: 20px;
   }
   
+  
+  button {
+    width: 150px;
+    padding: 10px;
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #3aafa9;
+  }
+  
+  .cadastro-text {
+    margin-top: 20px;
+    color: #6c757d;
+  }
+  
+  .cadastro-text a {
+    color: #0d1b2a;
+    text-decoration: none;
+  }
+  
+  .cadastro-text a:hover {
+    text-decoration: underline;
+  }
