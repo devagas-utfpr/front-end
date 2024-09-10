@@ -90,7 +90,6 @@
   
   .select-container {
     width: 100%;
-    margin-bottom: 20px;
     position: relative;
 }
 
@@ -147,5 +146,23 @@
 }
 
 .vaga-desc::placeholder {
+    color: #6c757d;
+}
+
+.data-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+}
+
+.data-field:hover {
+    border-color: #0d1b2a;
+}
+
+.data-field::placeholder {
     color: #6c757d;
 }
