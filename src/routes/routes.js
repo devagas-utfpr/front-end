@@ -1,5 +1,5 @@
 export const LOGIN = "/login";
-export const CADASTRO = "/cadastro";
-export const MINHASVAGAS = "/minhasVagas";
+export const CADASTRO = "/cadastrar-usuario";
+export const MINHASVAGAS = "/historico";
 export const CADASTRAR_EMPRESA = "/cadastrar-empresa";
 export const VAGAS = "/vagas";
