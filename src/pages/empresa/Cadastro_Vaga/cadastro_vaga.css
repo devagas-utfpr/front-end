@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .vaga-container {
+    max-width: 40%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .vaga-titulo {
+    font-size: 40px;
+    color: #161439;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
