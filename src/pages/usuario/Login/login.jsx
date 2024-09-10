@@ -110,7 +110,7 @@ export const Login = ({ children }) => {
                                 </p>
                             )}
 
-                            <div className="mt-8">
+                            <div className="!mt-8">
                                 <button
                                     type="submit"
                                     className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-lite hover:bg-default-hover focus:outline-none"

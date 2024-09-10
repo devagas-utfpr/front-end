@@ -207,7 +207,6 @@ export const Cadastro = ({ children }) => {
                                 />
                                 <MdCalendarMonth className="w-4 h-4 absolute right-4 icon-default" />
                             </div>
-                            <div class="w-4"></div>
                             <div className="relative flex items-center">
                                 <input
                                     type="text"
@@ -236,7 +235,6 @@ export const Cadastro = ({ children }) => {
 
                                 <RiLockPasswordLine className="w-4 h-4 absolute right-4 icon-default" />
                             </div>
-                            <div class="w-4"></div>
                             <div className="relative flex items-center">
                                 <input
                                     type="password"

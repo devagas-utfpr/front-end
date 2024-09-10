@@ -3,8 +3,12 @@
     background-color: #09243f;
 }
 
+.bg-white {
+    background-color: #FFFFFF;
+}
+
 .bg-default {
-    background-color: #09243f;
+    background-color: #09243F;
 }
 
 .bg-lite {
