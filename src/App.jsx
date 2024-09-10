@@ -1,19 +1,47 @@
-import "./App.css";
-
-import { Cadastro, Login, CadastrarEmpresa, MinhasVagas } from "./pages";
-import { LOGIN, CADASTRO, CADASTRAR_EMPRESA, MINHASVAGAS } from "./routes/routes";
+import {
+    Cadastro,
+    Login,
+    CadastrarEmpresa,
+    ListagemVagas,
+    MinhasVagas,
+} from "./pages";
+import {
+    LOGIN,
+    CADASTRO,
+    CADASTRAR_EMPRESA,
+    MINHASVAGAS,
+    VAGAS,
+} from "./routes/routes";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { AuthProvider, useAuthContext } from "./shared/contexts/AuthContext";
+
+const Private = ({ children }) => {
+    const { isAuthenticated } = useAuthContext();
+
+    return isAuthenticated ? (
+        <>{children}</>
+    ) : (
+        <Routes>
+            <Route path={LOGIN} element={<Login />} />
+            <Route path={CADASTRO} element={<Cadastro />} />
+            <Route path={CADASTRAR_EMPRESA} element={<CadastrarEmpresa />} />
+            <Route path="*" element={<Navigate to={LOGIN} />} />
+        </Routes>
+    );
+};
 
 export const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={LOGIN} element={<Login />} />
-        <Route path={CADASTRO} element={<Cadastro />} />
-        <Route path={CADASTRAR_EMPRESA} element={<CadastrarEmpresa />} />
-        <Route path={MINHASVAGAS} element={<MinhasVagas />} />
-        <Route path="*" element={<Navigate to={LOGIN} />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <AuthProvider>
+                <Private>
+                    <Routes>
+                        <Route path={MINHASVAGAS} element={<MinhasVagas />} />
+                        <Route path={VAGAS} element={<ListagemVagas />} />
+                        <Route path="*" element={<Navigate to={VAGAS} />} />
+                    </Routes>
+                </Private>
+            </AuthProvider>
+        </BrowserRouter>
+    );
 };
