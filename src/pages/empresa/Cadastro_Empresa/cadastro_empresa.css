@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .empresa-container {
+    max-width: 40%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .logo {
+    max-width: 250px; 
+    height: auto;      
+    margin: 0 auto 10px;
+    display: block;
+  }
+  
+  h2 {
+    font-size: 40px;   
+    color: #161439;   
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .form-empresa-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .form-empresa-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+  }
+  
+  .form-empresa-group input::placeholder {
+    color: #6c757d;
+  }
+
+  .form-row {
+    flex: 1;
+  }
+  
+  
+  button {
+    width: 150px;
+    padding: 10px;
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #3aafa9;
+  }
+  
+  .cadastro-text {
+    margin-top: 20px;
+    color: #6c757d;
+  }
+  
+  .cadastro-text a {
+    color: #0d1b2a;
+    text-decoration: none;
+  }
+  
+  .cadastro-text a:hover {
+    text-decoration: underline;
+  }
