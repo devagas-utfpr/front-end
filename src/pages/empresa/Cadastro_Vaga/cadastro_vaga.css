@@ -56,6 +56,38 @@
     margin-top: 20px;
   }
   
+  .vaga-button-cadastrar {
+    width: 150px;
+    padding: 10px;
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .vaga-button-cancelar {
+    width: 150px;
+    padding: 10px;
+    background-color: #8b261f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .vaga-button-cadastrar:hover {
+    background-color: #3aafa9;
+  }
+
+  .vaga-button-cancelar:hover {
+    background-color: #eb4741;
+  }
+  
   .select-container {
     width: 100%;
     margin-bottom: 20px;

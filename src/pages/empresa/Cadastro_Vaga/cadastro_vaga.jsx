@@ -64,6 +64,14 @@ export const CadastrarVaga = () => {
                       onChange={(e) => setDescricao(e.target.value)}
                   />
               </div>
+      <div className="form-row">
+      <div className="vaga-button-cadastrar">
+        Cadastrar
+      </div>
+      <div className="vaga-button-cancelar">
+        Cancelar
+      </div>
+      </div>
     </form>
   </div>
   );
