@@ -1,0 +1,20 @@
+.hover\:bg-default-hover:hover {
+    --tw-bg-opacity: 1;
+    background-color: #09243f;
+}
+
+.bg-default {
+    background-color: #09243f;
+}
+
+.bg-lite {
+    background-color: #1C6390;
+}
+
+.text-default {
+    color: #1C6390;
+}
+
+.icon-default {
+    color: #8D8CA0;
+}
