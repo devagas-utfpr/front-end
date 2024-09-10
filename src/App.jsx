@@ -4,6 +4,7 @@ import {
     CadastrarEmpresa,
     ListagemVagas,
     MinhasVagas,
+    CadastrarVaga
 } from "./pages";
 import {
     LOGIN,
@@ -11,6 +12,7 @@ import {
     CADASTRAR_EMPRESA,
     MINHASVAGAS,
     VAGAS,
+    CADASTRAR_VAGA,
 } from "./routes/routes";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthProvider, useAuthContext } from "./shared/contexts/AuthContext";
@@ -36,6 +38,7 @@ export const App = () => {
             <AuthProvider>
                 <Private>
                     <Routes>
+                        <Route path={CADASTRAR_VAGA} element={<CadastrarVaga />} />
                         <Route path={MINHASVAGAS} element={<MinhasVagas />} />
                         <Route path={VAGAS} element={<ListagemVagas />} />
                         <Route path="*" element={<Navigate to={VAGAS} />} />

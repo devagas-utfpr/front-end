@@ -3,6 +3,7 @@ import "./cadastro_empresa.css";
 
 export const CadastrarEmpresa = () => {
     const [cnpj, setCnpj] = useState("");
+    const [city, setCity] = useState(""); 
 
     const handleCnpjChange = (e) => {
         let value = e.target.value.replace(/\D/g, "");
@@ -22,6 +23,11 @@ export const CadastrarEmpresa = () => {
         setCnpj(value.slice(0, 18));
     };
 
+    const handleCityChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ''); 
+        setCity(value);
+    };
+
     return (
         <div className="empresa-container">
             <h2>Cadastre sua Empresa</h2>
@@ -38,6 +44,14 @@ export const CadastrarEmpresa = () => {
                         placeholder="CNPJ"
                         value={cnpj}
                         onChange={handleCnpjChange}
+                    />
+                </div>
+                <div className="form-empresa-group">
+                    <input
+                        type="text"
+                        placeholder="Cidade"
+                        value={city}
+                        onChange={handleCityChange}
                     />
                 </div>
                 <div className="form-row">
