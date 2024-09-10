@@ -1,0 +1,102 @@
+.minhas-vagas-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .vagas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card-vaga {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+  }
+
+  .status-data{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 20px;
+  }
+  
+  
+  .status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFF2;
+    width: 163px;
+    height: 27px;
+    border-radius: 50px;
+    color: #161439;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 15px;
+
+}
+
+.Aberta{
+    background-color: #D4F5D9;
+}
+
+.Fechada{
+    background-color: #ffcaca;
+}
+
+.titulo{
+    width: 25%;
+}
+
+.titulo > p{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nome-empresa{
+    width: 25%;
+}
+
+.local{
+    width: 25%;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+  
+.botao-visualizar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.botao-visualizar:hover{
+    transition: .3s;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
