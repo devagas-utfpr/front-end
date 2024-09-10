@@ -55,7 +55,6 @@
     gap: 20px;
     margin-top: 20px;
   }
-
   
   .select-container {
     width: 100%;
@@ -101,4 +100,20 @@
 .vaga-select:focus {
     outline: none;
     border-color: #0d1b2a;
+}
+
+.vaga-desc {
+    width: 100%;
+    height: 150px; 
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+    resize: none; 
+}
+
+.vaga-desc::placeholder {
+    color: #6c757d;
 }
