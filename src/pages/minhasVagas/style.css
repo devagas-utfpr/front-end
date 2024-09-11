@@ -1,8 +1,13 @@
+body{
+  background-color: #09243F;
+}
+
 .minhas-vagas-container {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
     color: white;
+    min-height: 100vh;
   }
   
   h1 {
@@ -76,11 +81,44 @@
     width: 25%;
 }
 
+
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao{
+  & button{
+    width: 120px;
+  }
+}
+
+/*
 .botao{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 10%;
+    background-color: #1C6390;
 }
   
 .botao-visualizar{
@@ -99,4 +137,4 @@ button:focus {
     outline: none;
     box-shadow: none;
   }
-  
+  */

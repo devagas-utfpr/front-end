@@ -2,6 +2,11 @@
     color: #161439;
 }
 
+h1{
+    font-size: 32px;
+    font-weight: 500;
+}
+
 
 h3{
     font-weight: bold;
@@ -42,4 +47,8 @@ button{
     padding-top: 55px;
     display: flex;
     justify-content: center;
+
+    & button{
+        width: 150px;
+    }
   }
