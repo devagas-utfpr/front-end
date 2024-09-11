@@ -7,7 +7,7 @@ import { LuUser2 } from "react-icons/lu";
 import { FaRegIdCard } from "react-icons/fa";
 
 import { useAuthContext } from "../../../shared/contexts/AuthContext";
-import { UsuarioServices } from "../../../shared/infrastructure";
+import { EmpresaServices } from "../../../shared/infrastructure";
 
 const SignUpValidationSchema = yup.object().shape({
     nome: yup
@@ -70,7 +70,7 @@ export const CadastrarEmpresa = ({ children }) => {
                 {
                     nome,
                     email,
-                    cidade,
+                    cidade: parseInt(cidade),
                     cnpj,
                     senha,
                     confirmarSenha,
@@ -78,10 +78,10 @@ export const CadastrarEmpresa = ({ children }) => {
                 { abortEarly: false }
             );
 
-            const response = await UsuarioServices.create({
+            const response = await EmpresaServices.create({
                 nome,
                 email,
-                cidade,
+                cidade: parseInt(cidade),
                 cnpj,
                 senha,
             });
