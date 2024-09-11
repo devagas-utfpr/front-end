@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .vaga-container {
+    max-width: 40%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .vaga-titulo {
+    font-size: 40px;
+    color: #161439;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .form-vaga-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .vaga-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+  }
+
+  .vaga-input::placeholder {
+  color: #6c757d;
+}
+  .form-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .vaga-button-cadastrar {
+    width: 150px;
+    padding: 10px;
+    background-color: #1f6f8b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .vaga-button-cancelar {
+    width: 150px;
+    padding: 10px;
+    background-color: #8b261f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .vaga-button-cadastrar:hover {
+    background-color: #3aafa9;
+  }
+
+  .vaga-button-cancelar:hover {
+    background-color: #eb4741;
+  }
+  
+  .select-container {
+    width: 100%;
+    position: relative;
+}
+
+.vaga-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none; 
+}
+
+.vaga-select::placeholder {
+    color: #6c757d;
+}
+
+.select-container::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.select-container select {
+    padding-right: 40px; 
+}
+
+.vaga-select:hover {
+    border-color: #0d1b2a;
+}
+
+.vaga-select:focus {
+    outline: none;
+    border-color: #0d1b2a;
+}
+
+.vaga-desc {
+    width: 100%;
+    height: 150px; 
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+    resize: none; 
+}
+
+.vaga-desc::placeholder {
+    color: #6c757d;
+}
+
+.data-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #0d1b2a;
+}
+
+.data-field:hover {
+    border-color: #0d1b2a;
+}
+
+.data-field::placeholder {
+    color: #6c757d;
+}
