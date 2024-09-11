@@ -15,6 +15,30 @@ const create = async (vaga) => {
     }
 };
 
+const getAll = async () => {
+    try {
+      const { data } = await Api.get("/vagas");
+      return data;
+    } catch (error) {
+        return new Error(
+            (error && error.message) || "Erro ao buscar vagas."
+        );
+    }
+  };
+
+  const getVagaUsuario = async () => {
+    try {
+      const { data } = await Api.get("/usuarios/vagas");
+      return data;
+    } catch (error) {
+        return new Error(
+            (error && error.message) || "Erro ao buscar vagas."
+        );
+    }
+  };
+
 export const VagaServices = {
     create,
+    getAll,
+    getVagaUsuario,
 };
