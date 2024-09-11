@@ -1,26 +1,32 @@
-import {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-} from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure, Menu } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { useLocation } from "react-router-dom";
 
-const navigation = [
-    { name: "Lista de vagas", href: "#", current: true },
-    { name: "Histórico", href: "#", current: false },
+const navigationUsuario = [
+    { name: "Lista de vagas", href: "/vagas" },
+    { name: "Histórico", href: "/historico" },
+];
+
+const navigationEmpresa = [
+    { name: "Minhas vagas", href: "/vagas" },
+    { name: "Cadastrar vaga", href: "/cadastrar-vaga" },
 ];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-export const Header = () => {
+export const Header = ({ isEmpresa }) => {
     const { logout } = useAuthContext();
+    const location = useLocation(); // Obtém a localização atual
+
+    // Verifica qual é a rota atual e marca o item correspondente como current
+    const currentNavigation = isEmpresa ? navigationEmpresa : navigationUsuario;
+    currentNavigation.forEach((item) => {
+        item.current = location.pathname === item.href;
+    });
+
     return (
         <Disclosure as="nav" className="bg-white">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -53,7 +59,7 @@ export const Header = () => {
                         {/* Desktop Menu */}
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                {navigation.map((item) => (
+                                {currentNavigation.map((item) => (
                                     <a
                                         key={item.name}
                                         href={item.href}
@@ -84,7 +90,7 @@ export const Header = () => {
                                     </span>
                                     <img
                                         className="h-8 w-8 rounded-full"
-                                        src="./perfil.png"
+                                        src="./perfil.jpg"
                                         alt=""
                                     />
                                 </Menu.Button>
@@ -125,7 +131,7 @@ export const Header = () => {
             {/* Mobile Menu Panel */}
             <Disclosure.Panel className="sm:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                    {navigation.map((item) => (
+                    {currentNavigation.map((item) => (
                         <Disclosure.Button
                             key={item.name}
                             as="a"
