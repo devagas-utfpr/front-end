@@ -2,6 +2,7 @@ import { MdEdit } from "react-icons/md";
 import { IoMdTrash } from "react-icons/io";
 
 export const Card = ({ cardInfo, isEmpresa }) => {
+    console.log('a', cardInfo);
     return (
         <div class="bg-white rounded overflow-hidden">
             <div class="p-6">
@@ -25,9 +26,9 @@ export const Card = ({ cardInfo, isEmpresa }) => {
                     {cardInfo.modalidade}
                 </span>
                 <h4 class="text-sm font-bold text-default mt-4">
-                    {cardInfo.empresa}
+                    {cardInfo.empresa.nome}
                 </h4>
-                <h4 class="text-sm text-gray-500 mb-3">{cardInfo.local}</h4>
+                <h4 class="text-sm text-gray-500 mb-3">{cardInfo.empresa.cidade}</h4>
                 <p class="text-default text-sm font-semibold mt-4">
                     {cardInfo.dataInicio} à {cardInfo.dataFim}
                 </p>

@@ -31,7 +31,11 @@ const SignUpValidationSchema = yup.object().shape({
         .min(0, "Modalidade inválida")
         .max(2, "Modalidade inválida")
         .required("Modalidade é obrigatório"),
-    cargo: yup.string().required("Cargo é obrigatório"),
+    cargo: yup.string().uuid("Cargo inválido").required("Cargo é obrigatório"),
+    empresa: yup
+        .string()
+        .uuid("Empresa inválida")
+        .required("Empresa é obrigatório"),
 });
 
 const parseDateString = (dateString) => {
@@ -47,7 +51,7 @@ const parseDateString = (dateString) => {
     return new Date(`${year}-${month}-${day}`);
 };
 
-export const CadastrarVaga = ({ isEmpresa }) => {
+export const CadastrarVaga = ({ uuid, isEmpresa }) => {
     const navigate = useNavigate();
 
     const [cargos, setCargos] = useState([]);
@@ -74,7 +78,6 @@ export const CadastrarVaga = ({ isEmpresa }) => {
         fetchCargos();
     }, []);
 
-    // Função de validação e login
     const handleSubmit = async (event) => {
         event.preventDefault();
         setError("");
@@ -88,6 +91,7 @@ export const CadastrarVaga = ({ isEmpresa }) => {
                     dataFim,
                     modalidade,
                     cargo,
+                    empresa: uuid,
                 },
                 {
                     abortEarly: false,
@@ -96,16 +100,23 @@ export const CadastrarVaga = ({ isEmpresa }) => {
 
             const parsedDateInicio = parseDateString(dataInicio);
             const parsedDateFim = parseDateString(dataFim);
+            const currentDate = new Date();
 
             if (parsedDateInicio && parsedDateFim) {
+                // Verifique se a dataInicio é menor que a data atual
+                const status = parsedDateInicio < currentDate ? true : false;
+
                 try {
+                    console.log("a");
                     const response = await VagaServices.create({
                         titulo,
                         descricao,
                         dataInicio: parsedDateInicio,
                         dataFim: parsedDateFim,
-                        modalidade,
-                        cargo,
+                        modalidade: parseInt(modalidade),
+                        uuidCargo: cargo,
+                        uuidEmpresa: uuid,
+                        status, // Inclua o campo status no objeto enviado
                     });
                     if (response instanceof Error) {
                         setError("Erro ao cadastrar vaga");

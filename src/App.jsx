@@ -18,22 +18,26 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthProvider, useAuthContext } from "./shared/contexts/AuthContext";
 import { useEffect, useState } from "react";
 
+const LoadingSpinner = () => {
+    return (
+        <div className="flex items-center justify-center min-h-screen">
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-500"></div>
+        </div>
+    );
+};
+
 const Private = () => {
-    const { isAuthenticated, isEmpresa } = useAuthContext();
+    const { isAuthenticated, uuid, isEmpresa } = useAuthContext();
     const [loading, setLoading] = useState(true);
 
-    console.log("l", loading);
-    console.log("a", isAuthenticated);
-    console.log("i", isEmpresa);
-
     useEffect(() => {
-        if (isAuthenticated !== undefined && isEmpresa !== undefined) {
+        if (isAuthenticated !== undefined) {
             setLoading(false);
         }
-    }, [isAuthenticated, isEmpresa]);
+    }, [isAuthenticated]);
 
     if (loading) {
-        return <div>Loading...</div>; // Ou qualquer spinner de carregamento
+        return <LoadingSpinner />;
     }
 
     return isAuthenticated ? (
@@ -46,7 +50,9 @@ const Private = () => {
                     />
                     <Route
                         path={CADASTRAR_VAGA}
-                        element={<CadastrarVaga isEmpresa={isEmpresa} />}
+                        element={
+                            <CadastrarVaga uuid={uuid} isEmpresa={isEmpresa} />
+                        }
                     />
                     <Route path="*" element={<Navigate to={VAGAS} />} />
                 </Routes>

@@ -11,6 +11,7 @@ import { jwtDecode } from "jwt-decode";
 
 const AuthContext = createContext({
     isAuthenticated: false,
+    uuid: "",
     isEmpresa: false,
     login: async () => {},
     logout: () => {},
@@ -18,6 +19,7 @@ const AuthContext = createContext({
 
 export const AuthProvider = ({ children }) => {
     const [accessToken, setAccessToken] = useState(undefined);
+    const [uuid, setUuid] = useState(undefined);
     const [isEmpresa, setIsEmpresa] = useState(false);
 
     const handleLogin = useCallback(async (email, senha) => {
@@ -29,6 +31,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem("APP_ACCESS_TOKEN", result.accessToken);
                 setAccessToken(result.accessToken);
                 const decodedToken = jwtDecode(result.accessToken);
+                setUuid(decodedToken.uuid);
                 setIsEmpresa(decodedToken.isEmpresa);
             }
         } catch (error) {
@@ -40,6 +43,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("APP_ACCESS_TOKEN");
         setAccessToken(undefined);
         setIsEmpresa(false);
+        setUuid(undefined);
     }, []);
 
     const isAuthenticated = useMemo(() => !!accessToken, [accessToken]);
@@ -61,11 +65,13 @@ export const AuthProvider = ({ children }) => {
                 }
                 setAccessToken(accessToken);
                 const decodedToken = jwtDecode(accessToken);
+                setUuid(decodedToken.uuid);
                 setIsEmpresa(decodedToken.isEmpresa);
             }
         } else {
             setAccessToken(undefined);
-            setIsEmpresa(false); // Corrigir aqui para garantir que "isEmpresa" não seja "undefined"
+            setIsEmpresa(false);
+            setUuid(undefined);
         }
     }, [handleLogOut]);
 
@@ -73,6 +79,7 @@ export const AuthProvider = ({ children }) => {
         <AuthContext.Provider
             value={{
                 isAuthenticated,
+                uuid,
                 isEmpresa,
                 login: handleLogin,
                 logout: handleLogOut,

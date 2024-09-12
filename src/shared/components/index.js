@@ -3,3 +3,4 @@ export * from "./card/Card";
 export * from "./vagaDetail/VagaDetail";
 export * from "./paginacao/Paginacao";
 export * from "./footer/Footer";
+export * from "./loading/Loading";

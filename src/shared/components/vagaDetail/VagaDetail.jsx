@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import { BsPencilSquare } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import './style.css'
