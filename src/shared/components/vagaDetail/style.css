@@ -1,0 +1,54 @@
+.cardDetail{
+    color: #161439;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 25px 0px 25px 0px;
+}
+
+.topo{
+    height: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.closeButton{
+    padding: 3px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    background-color: rgb(243, 243, 243);
+    transition: .3s;
+}
+
+button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.statusDiv{
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer {
+    margin-top: auto;
+    padding-top: 55px;
+    display: flex;
+    justify-content: center;
+
+    & button{
+        width: 150px;
+    }
+  }

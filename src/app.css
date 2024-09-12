@@ -1,0 +1,47 @@
+.hover\:bg-default-hover:hover {
+    --tw-bg-opacity: 1;
+    background-color: #09243f;
+}
+
+.hover\:text-default-hover:hover {
+    --tw-bg-opacity: 1;
+    color: #09243f;
+}
+
+.border-default {
+    --tw-border-opacity: 1;
+    border-color: #09243f;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-default {
+    background-color: #09243f;
+}
+
+.bg-lite {
+    background-color: #1c6390;
+}
+
+.text-default {
+    color: #1c6390;
+}
+
+.text-dark {
+    color: #09243f;
+}
+
+.text-lite {
+    color: #8d8ca0;
+}
+
+.icon-default {
+    color: #8d8ca0;
+}
+
+.text-mobile {
+    font-size: 0.6rem;
+    line-height: 1.25rem;
+}
