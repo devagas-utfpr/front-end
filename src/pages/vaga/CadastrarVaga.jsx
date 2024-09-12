@@ -107,7 +107,6 @@ export const CadastrarVaga = ({ uuid, isEmpresa }) => {
                 const status = parsedDateInicio < currentDate ? true : false;
 
                 try {
-                    console.log("a");
                     const response = await VagaServices.create({
                         titulo,
                         descricao,

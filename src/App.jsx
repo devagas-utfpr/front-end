@@ -46,7 +46,12 @@ const Private = () => {
                 <Routes>
                     <Route
                         path={VAGAS}
-                        element={<ListagemVagas isEmpresa={isEmpresa} />}
+                        element={
+                            <ListagemVagas
+                                isEmpresa={isEmpresa}
+                                usuario={uuid}
+                            />
+                        }
                     />
                     <Route
                         path={CADASTRAR_VAGA}
@@ -58,10 +63,18 @@ const Private = () => {
                 </Routes>
             ) : (
                 <Routes>
-                    <Route path={MINHASVAGAS} element={<MinhasVagas />} />
+                    <Route
+                        path={MINHASVAGAS}
+                        element={<MinhasVagas uuidUsuario={uuid} />}
+                    />
                     <Route
                         path={VAGAS}
-                        element={<ListagemVagas isEmpresa={isEmpresa} />}
+                        element={
+                            <ListagemVagas
+                                isEmpresa={isEmpresa}
+                                usuario={uuid}
+                            />
+                        }
                     />
                     <Route path={CADASTRAR_VAGA} element={<CadastrarVaga />} />
                     <Route path="*" element={<Navigate to={VAGAS} />} />
