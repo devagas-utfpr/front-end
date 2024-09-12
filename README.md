@@ -30,7 +30,7 @@ frontend/
 
 ## 📚 Principais Tecnologias e Bibliotecas Utilizadas
 
-<img src="https://skillicons.dev/icons?i=react,tailwind,mui,vite" />
+<img src="https://skillicons.dev/icons?i=react,tailwind,vite" />
 
 ## ❗ Pré-requisitos
 
